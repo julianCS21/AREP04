@@ -101,35 +101,30 @@ Ejecutamos el comando
 ---
 
 
-### Diseño del programa.
+### Arquitectura del programa.
+
+
+El programa está compuesto por diversas capas, cada una con su propia función específica:
+
+HTTPserver
+La capa HTTPserver actúa como punto de entrada para las solicitudes entrantes, dirigiéndolas hacia las partes apropiadas del programa.
+
+Controllers
+La capa de Controllers se encarga de recibir las solicitudes del servidor y de dirigirlas hacia los servicios correspondientes, actuando como intermediarios entre el servidor y la lógica de negocio.
+
+Services
+La capa de Services contiene la lógica de negocio y se ocupa de realizar las operaciones requeridas por las solicitudes del usuario.
+
+ExternalWebServices
+La capa ExternalWebServices se dedica a interactuar con servicios web externos, permitiendo a la aplicación acceder a recursos y funcionalidades fuera de su alcance directo.
+
+Static
+La capa Static almacena archivos estáticos como HTML, JS, CSS y archivos de imagen. Estos archivos se sirven a los usuarios para presentar la interfaz de usuario en sus navegadores.
+
+Esta estructura de capas facilita la organización, mantenimiento y escalabilidad del programa al separar las responsabilidades en componentes claros y definidos.
 
 
 
-El programa consta de cuatro componentes principales:
-
-1. **JS Web Client (Cliente Web en JavaScript):** Representado en la carpeta "views", este cliente es la interfaz de nuestra aplicación. Realiza consultas asincrónicas mediante solicitudes GET utilizando promesas.
-
-2. **Web Server with REST API Facade (Servidor Web con Fachada de API REST):** Dividido en tres carpetas.
-
-   - **WebServer (Servidor Web):** Codifica el servidor que recibe las solicitudes del cliente.
-   
-   - **Controllers (Controladores):** Actúan como intermediarios entre los servicios y el servidor web. Se centran en el recurso "films".
-   
-   - **Services (Servicios):** Contiene la lógica del backend. Implementa la lógica necesaria para proporcionar las respuestas requeridas por el cliente.
-
-3. **External REST API (API REST Externa):** Representa servicios web externos a los cuales se accede para obtener información sobre el recurso "films".
-
-4. **Concurrent Java Test Client (Cliente de Pruebas Java Concurrente):** Una clase en Java responsable de probar las funcionalidades del backend de la fachada de manera concurrente a través de hilos. Se encuentra en la carpeta "test".
-
-
-
-
-Para extender la funcionalidad de nuestro backend, hemos implementado una interfaz que define las funcionalidades y una clase que la implementa. Esta estructura nos permite agregar nuevas funciones simplemente extendiendo la interfaz existente.
-
-
-
-
-Cuando deseamos añadir más servicios web externos, utilizamos una interfaz de fábrica que devuelve instancias de los servicios web necesarios. Cada nuevo servicio web debe implementar esta interfaz de fábrica. También hemos implementado una interfaz con los métodos que deben ser implementados por los servicios web externos.
 
 
 
@@ -138,10 +133,11 @@ Cuando deseamos añadir más servicios web externos, utilizamos una interfaz de 
 
 * [Maven](https://maven.apache.org/): Apache Maven es una herramienta que estandariza la configuración del ciclo de vida del proyecto.
 * [Git](https://rometools.github.io/rome/):  Es un sistema de control de versiones distribuido (VCS).
-* [Visual Studio Code](https://code.visualstudio.com): es un editor de código fuente desarrollado por Microsoft.
+* [Intellj](https://www.jetbrains.com/es-es/idea/): IntelliJ IDEA es un IDE que ayuda a los desarrolladores a escribir, depurar y administrar código de manera más eficiente y efectiva, con muchas características que facilitan el proceso de desarrollo de software.
 * [Java 19](https://www.java.com/es/): Lenguaje de programación de propósito general con enfoque a el paradigma de orientado a objetos, y con un fuerte tipado de variables.
 * [Html](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics): es un lenguaje de marcado que estructura una página web y su contenido.
 * [JavaScript](https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript): lenguaje de programación que los desarrolladores utilizan para hacer paginas web dinamicas.
+* [CSS](https://developer.mozilla.org/es/docs/Web/CSS) Lenguaje para darles estilos a paginas web.
 
 
 ## Autor
