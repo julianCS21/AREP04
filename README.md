@@ -106,20 +106,32 @@ Ejecutamos el comando
 
 El programa está compuesto por diversas capas, cada una con su propia función específica:
 
-HTTPserver
+## HTTPserver
+
+
 La capa HTTPserver actúa como punto de entrada para las solicitudes entrantes, dirigiéndolas hacia las partes apropiadas del programa.
 
-Controllers
+## Controllers
+
+
 La capa de Controllers se encarga de recibir las solicitudes del servidor y de dirigirlas hacia los servicios correspondientes, actuando como intermediarios entre el servidor y la lógica de negocio.
 
-Services
+## Services
+
+
 La capa de Services contiene la lógica de negocio y se ocupa de realizar las operaciones requeridas por las solicitudes del usuario.
 
-ExternalWebServices
+## ExternalWebServices
+
+
 La capa ExternalWebServices se dedica a interactuar con servicios web externos, permitiendo a la aplicación acceder a recursos y funcionalidades fuera de su alcance directo.
 
-Static
+## Static
+
+
 La capa Static almacena archivos estáticos como HTML, JS, CSS y archivos de imagen. Estos archivos se sirven a los usuarios para presentar la interfaz de usuario en sus navegadores.
+
+
 
 Esta estructura de capas facilita la organización, mantenimiento y escalabilidad del programa al separar las responsabilidades en componentes claros y definidos.
 
