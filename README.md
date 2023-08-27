@@ -86,7 +86,8 @@ Aqui nos debera de cargar la siguiente pagina, con la cual podemos empezar a hac
 
 # Aplicacion de servicio REST
 
-![image](https://github.com/julianCS21/taller02AREP/assets/96396177/66d150d0-ff92-40a8-a99c-689893c6ab15)
+![image](https://github.com/julianCS21/taller02AREP/assets/96396177/6ae7c746-9a0a-497d-9e66-c84fe40926d1)
+
 
 
 
