@@ -145,42 +145,28 @@ Ejecutamos el comando
 ### Arquitectura del programa.
 
 
-El programa está compuesto por diversas capas, cada una con su propia función específica:
 
-## HTTPserver
+La estructura del programa consta de varias capas, cada una con su función específica:
 
-
+HTTPserver
 La capa HTTPserver actúa como punto de entrada para las solicitudes entrantes, dirigiéndolas hacia las partes apropiadas del programa.
 
-## Controllers
+Controllers
+La capa de Controllers se encarga de recibir las solicitudes del servidor y dirigirlas hacia los servicios correspondientes, actuando como intermediarios entre el servidor y la lógica de negocio.
 
+Services
+La capa de Services contiene la lógica de negocio y se encarga de realizar las operaciones requeridas por las solicitudes del usuario. Aquí también definimos la interfaz funcional y la implementación de los métodos para crear los endpoints y obtener estos métodos de la estructura de datos que maneja.
 
-La capa de Controllers se encarga de recibir las solicitudes del servidor y de dirigirlas hacia los servicios correspondientes, actuando como intermediarios entre el servidor y la lógica de negocio.
-
-## Services
-
-
-La capa de Services contiene la lógica de negocio y se ocupa de realizar las operaciones requeridas por las solicitudes del usuario, aqui tambien definimos la interfaz funcional  la impleemtacion de los metodos para poder crear los endpoints y poder obtener dicho metodo de la estructura de datos que maneja estos mismos.
-
-## ExternalWebServices
-
+ExternalWebServices
 La capa ExternalWebServices se dedica a interactuar con servicios web externos, permitiendo a la aplicación acceder a recursos y funcionalidades fuera de su alcance directo.
 
-## Static
-
-
+Static
 La capa Static almacena archivos estáticos como HTML, JS, CSS y archivos de imagen. Estos archivos se sirven a los usuarios para presentar la interfaz de usuario en sus navegadores.
 
-
-## HTTPObjects
-
-Capa que contiene los objetos HTTP(request y response) usados para la implementacion de la interfaz funcional(clase anonima) y asi poder implementar funciones lambda.
-
-
+HTTPObjects
+La capa HTTPObjects contiene los objetos HTTP (request y response) utilizados para la implementación de la interfaz funcional (clase anónima) y así poder implementar funciones lambda.
 
 Esta estructura de capas facilita la organización, mantenimiento y escalabilidad del programa al separar las responsabilidades en componentes claros y definidos.
-
-
 
 
 
