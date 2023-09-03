@@ -106,19 +106,19 @@ Aqui nos debera de cargar la siguiente pagina, con la cual podemos empezar a hac
 
 # ¿Como el desarrollador crearia una aplicacion con este marco de trabajo?
 
-Es simple, debe primero crear un controlador para poder crear los endpoints y implementar las funciones lambda para manejar el request, en este caso creamos este controlador 
+Es simple, debe primero crear un controlador para poder añadir los endpoints a la estructura de datos encargada de buscar el metodo correspondiente y implementar las funciones lambda para manejar el request, en este caso creamos este controlador. 
 
 
 ![image](https://github.com/julianCS21/taller03AREP/assets/96396177/893a9222-9955-4d94-bd48-70ca977fa7a0)
 
 
- y luego debemos instanciar el controlador dentro del servidor web
+ y luego debemos instanciar el controlador dentro del servidor web.
 
 
 ![image](https://github.com/julianCS21/taller03AREP/assets/96396177/8fd3736d-ce92-43a5-9024-9b7664b6d98c)
 
 
-con esto al poner a correr el servidor, y buscar el endpoint a traves de nuestro navegador nos saldra asi, asegurando que su contenido sea de tipo JSON.
+con esto al poner a correr el servidor, y buscar el endpoint a traves de nuestro navegador nos saldra asi.
 
 
 ![image](https://github.com/julianCS21/taller03AREP/assets/96396177/8a598f79-2145-4014-9079-53d236a5f4b8)
