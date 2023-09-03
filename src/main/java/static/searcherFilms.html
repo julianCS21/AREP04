@@ -42,15 +42,36 @@
 <form action="/search" method="get">
     <input type="text" name="q" placeholder="Search a film...">
     <br><br>
-    <button type="button" onclick="searchFilm()">Search</button>
+    <button type="button" onclick="searchFilm()">Search (GET)</button>
+</form>
+<form action="/search" method="post">
+    <input type="text" id="postInput" placeholder="Post a film...">
+    <br><br>
+    <button type="button" onclick="postFilm()">Post (POST)</button>
 </form>
 <h1 id="film">Film</h1>
 <script>
     function searchFilm() {
       var input = document.querySelector('input[name="q"]');
       var filmTitle = input.value.replace(/ /g, "+");
-      var url = "http://localhost:35000/films/" + filmTitle;
+      var url = "http://localhost:35000/films?film=" + filmTitle;
       fetch(url)
+        .then(response => response.text())
+        .then(data => (document.getElementById("film").innerHTML = data))
+        .catch(error => console.error('Error:', error));
+    }
+
+    function postFilm() {
+      var input = document.querySelector('#postInput');
+      var filmTitle = input.value.replace(/ /g, "+");
+      var url = "http://localhost:35000/films"; // Cambia la URL según tus necesidades
+      var formData = new FormData();
+      formData.append("film", filmTitle);
+
+      fetch(url, {
+        method: "POST",
+        body: formData
+      })
         .then(response => response.text())
         .then(data => (document.getElementById("film").innerHTML = data))
         .catch(error => console.error('Error:', error));
