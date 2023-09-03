@@ -1,8 +1,7 @@
-# TALLER 2: TALLER DISEÑO Y ESTRUCTURACIÓN DE APLICACIONES DISTRIBUIDAS EN INTERNET
+# TALLER 3: MICROFRAMEWORKS WEB
 
 
-Programa creado para que el usuario pueda visualizar y usar los archivos locales del servidor.
-
+Programa creado para simular el microframework Spark a traves de funciones lambda.
 
 ### Prerequisitos
 
@@ -17,7 +16,7 @@ Git: Es un sistema de control de versiones distribuido (VCS).
 
 
 
-Java 19: Java es un lenguaje de programación de propósito general orientado a objetos, portátil y muy versátil.
+Java 11: Java es un lenguaje de programación de propósito general orientado a objetos, portátil y muy versátil.
 
 
 
@@ -26,12 +25,12 @@ Java 19: Java es un lenguaje de programación de propósito general orientado a 
 Clonamos el repositorio
 
 ```
-    git clone https://github.com/julianCS21/taller02AREP.git
+    git clone 
 
 ```
 Se accede a la carpeta principal del repositorio repositorio que acabamos de clonar
 
-	 cd taller02AREP
+	 cd taller03AREP
 
 Hacemos la construccion del proyecto
 
@@ -47,11 +46,11 @@ Ahora corremos el servidor
 	
 **Windows**
 
-	 mvn exec:java -"Dexec.mainClass"="edu.escuelaing.arep.ASE.app.HTTPserver.webServer"
+	 mvn exec:java -"Dexec.mainClass"="edu.escuelaing.arep.ASE.app.main"
 
 **Linux/MacOs**
 
-	 mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.ASE.app.HTTPserver.webServer"
+	 mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.ASE.app.main"
 
 Por ultimo accedemos a nuestro navegador de confianza con la siguiente URL
 
@@ -87,6 +86,21 @@ Aqui nos debera de cargar la siguiente pagina, con la cual podemos empezar a hac
 # Aplicacion de servicio REST
 
 ![image](https://github.com/julianCS21/taller02AREP/assets/96396177/6ae7c746-9a0a-497d-9e66-c84fe40926d1)
+
+
+
+# Sistema operativo Windows
+
+
+![image](https://github.com/julianCS21/taller03AREP/assets/96396177/38ee9e67-6392-46f8-9d7b-229663221930)
+
+
+
+
+# Sistema operativo Linux
+
+![WhatsApp Image 2023-09-03 at 1 23 22 PM](https://github.com/julianCS21/taller03AREP/assets/96396177/f17a7421-989d-4b66-aa16-3dcfff042b44)
+
 
 
 
