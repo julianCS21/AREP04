@@ -160,10 +160,9 @@ La capa de Controllers se encarga de recibir las solicitudes del servidor y de d
 ## Services
 
 
-La capa de Services contiene la lógica de negocio y se ocupa de realizar las operaciones requeridas por las solicitudes del usuario.
+La capa de Services contiene la lógica de negocio y se ocupa de realizar las operaciones requeridas por las solicitudes del usuario, aqui tambien definimos la interfaz funcional  la impleemtacion de los metodos para poder crear los endpoints y poder obtener dicho metodo de la estructura de datos que maneja estos mismos.
 
 ## ExternalWebServices
-
 
 La capa ExternalWebServices se dedica a interactuar con servicios web externos, permitiendo a la aplicación acceder a recursos y funcionalidades fuera de su alcance directo.
 
@@ -171,6 +170,11 @@ La capa ExternalWebServices se dedica a interactuar con servicios web externos, 
 
 
 La capa Static almacena archivos estáticos como HTML, JS, CSS y archivos de imagen. Estos archivos se sirven a los usuarios para presentar la interfaz de usuario en sus navegadores.
+
+
+## HTTPObjects
+
+Capa que contiene los objetos HTTP(request y response) usados para la implementacion de la interfaz funcional(clase anonima) y asi poder implementar funciones lambda.
 
 
 
