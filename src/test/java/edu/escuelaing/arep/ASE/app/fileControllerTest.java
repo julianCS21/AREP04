@@ -78,10 +78,10 @@ public class fileControllerTest {
     @Test
     public void whenItDoAGetJPGItShouldReturnThisFile() throws  IOException {
 
-        byte[] listExpected = Files.readAllBytes(Paths.get("src/main/java/static/mbappe.jpg"));
+        byte[] listExpected = Files.readAllBytes(Paths.get("src/main/java/static/mbappe.png"));
 
 
-        byte[] listResponse = fl.getImage("mbappe.jpg","src/main/java/static/");
+        byte[] listResponse = fl.getImage("mbappe.png","src/main/java/static/");
 
 
         Assert.assertArrayEquals(listExpected,listResponse);

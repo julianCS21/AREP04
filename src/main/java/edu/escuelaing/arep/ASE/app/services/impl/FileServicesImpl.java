@@ -22,8 +22,8 @@ public class FileServicesImpl  implements FileService {
             contentType += "text/css";
         } else if (nameFile.endsWith(".js")) {
             contentType += "text/javascript";
-        } else if (nameFile.endsWith(".jpg")) {
-            contentType += "image/jpeg";
+        } else if (nameFile.endsWith(".png")) {
+            contentType += "image/png";
         } else if (nameFile.endsWith(".json")) {
             contentType += "application/json";
         }else if(nameFile.endsWith(".root")){
@@ -87,7 +87,7 @@ public class FileServicesImpl  implements FileService {
 
 
         }
-        return Files.readAllBytes(Paths.get("AREP02/src/main/java/static/" + "dog.jpg"));
+        return Files.readAllBytes(Paths.get("AREP02/src/main/java/static/" + "dog.png"));
 
     }
 
@@ -102,7 +102,7 @@ public class FileServicesImpl  implements FileService {
 
 
         }
-        return Files.readAllBytes(Paths.get(path + "dog.jpg"));
+        return Files.readAllBytes(Paths.get(path + "dog.png"));
 
     }
 

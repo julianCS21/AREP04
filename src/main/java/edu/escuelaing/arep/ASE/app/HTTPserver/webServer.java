@@ -3,12 +3,15 @@ package edu.escuelaing.arep.ASE.app.HTTPserver;
 
 import edu.escuelaing.arep.ASE.app.HTTPObjects.Request;
 import edu.escuelaing.arep.ASE.app.HTTPObjects.Response;
+import edu.escuelaing.arep.ASE.app.POJOS.scanner.Scope;
 import edu.escuelaing.arep.ASE.app.controllers.ExampleController;
 import edu.escuelaing.arep.ASE.app.controllers.FileController;
 import edu.escuelaing.arep.ASE.app.controllers.FilmController;
 import static edu.escuelaing.arep.ASE.app.services.impl.HTTPmethodsImpl.getMethod;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URL;
@@ -21,19 +24,22 @@ public class webServer {
     private static webServer instance;
 
 
-    public static webServer getWebServer() throws IOException {
+    public static webServer getWebServer() throws IOException, ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException {
         if(instance == null){
             instance = new webServer();
 
         }
         return instance;
     }
-    private webServer() throws IOException {
+    private webServer() throws IOException, ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException {
         start();
     }
 
 
-    public void start() throws IOException{
+    public void start() throws IOException, ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+
+
+
 
 
         ServerSocket server = null;
@@ -41,7 +47,8 @@ public class webServer {
         FileController fileController = new FileController();
         FilmController filmController = new FilmController();
         ExampleController  exampleController = new ExampleController();
-
+        Scope scanner = new Scope();
+        scanner.getClasses();
 
         try {
             server = new ServerSocket(35000);
@@ -123,8 +130,14 @@ public class webServer {
                 String jsonResponse = getMethod(endpoint).HTTPAction(new Request(new URL(URL)),new Response());
                 header.add("Content-Length: " + jsonResponse.length());
                 response.add(jsonResponse);
-            }
-            else if(file.endsWith(".jpg")){
+            } else if (scanner.getMethod(endpoint) != null) {
+                Method aMethod = scanner.getMethod(endpoint);
+                header = fileController.getFile("rta.json");
+                String jsonResponse = (String) aMethod.invoke(null);
+                header.add("Content-Length: " + jsonResponse.length());
+                response.add(jsonResponse);
+                
+            } else if(file.endsWith(".png")){
                 header = fileController.getFile(file);
                 for(String Answer : header){
                     responseServer.println(Answer);
