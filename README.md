@@ -1,7 +1,7 @@
 # TALLER 4: TALLER DE ARQUITECTURAS DE SERVIDORES DE APLICACIONES, META PROTOCOLOS DE OBJETOS, PATRÓN IOC, REFLEXIÓN
 
 
-Programa creado para simular el microframework Spring a traves de reflexión.
+Programa creado para simular el microframework Spring a traves de reflexiónes que ofrece Java.
 
 ### Prerequisitos
 
