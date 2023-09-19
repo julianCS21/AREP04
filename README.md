@@ -82,14 +82,21 @@ Aqui nos debera de cargar la siguiente pagina, con la cual podemos empezar a hac
 # ¿Como el desarrollador crearia una aplicacion con este marco de trabajo?
 
 
+Es simple, considere los siguientes pasos
+
+1. Cree una clase dentro del los archivos edu.escuelaing.arep.ASE.app
+
+   ![image](https://github.com/julianCS21/AREP04/assets/96396177/5941d148-b0e6-4085-a1a9-eaae581d10af)
 
 
+2. Cree los metodos que considere necesarios, pero a su vez percatese de colocar la etiqueta RequestMapping(cabe aclarar que deben ser static y deben retornar string)
+
+   ![image](https://github.com/julianCS21/AREP04/assets/96396177/1856cc79-be9c-4b56-b674-09e14a53ff95)
 
 
+3. corra el servidor y revise que desde el navegador funcione lo implementado
 
-
-
-
+   ![image](https://github.com/julianCS21/AREP04/assets/96396177/7257ab60-97a1-4109-899c-0db57a8edb65)
 
 
 ---
