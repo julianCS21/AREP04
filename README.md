@@ -1,7 +1,7 @@
-# TALLER 3: MICROFRAMEWORKS WEB
+# TALLER 4: TALLER DE ARQUITECTURAS DE SERVIDORES DE APLICACIONES, META PROTOCOLOS DE OBJETOS, PATRÓN IOC, REFLEXIÓN
 
 
-Programa creado para simular el microframework Spark a traves de funciones lambda.
+Programa creado para simular el microframework Spring a traves de reflexión.
 
 ### Prerequisitos
 
@@ -16,7 +16,7 @@ Git: Es un sistema de control de versiones distribuido (VCS).
 
 
 
-Java 11: Java es un lenguaje de programación de propósito general orientado a objetos, portátil y muy versátil.
+Java 17: Java es un lenguaje de programación de propósito general orientado a objetos, portátil y muy versátil.
 
 
 
@@ -30,7 +30,7 @@ Clonamos el repositorio
 ```
 Se accede a la carpeta principal del repositorio repositorio que acabamos de clonar
 
-	 cd taller03AREP
+	 cd AREP04
 
 Hacemos la construccion del proyecto
 
@@ -46,11 +46,13 @@ Ahora corremos el servidor
 	
 **Windows**
 
-	 mvn exec:java -"Dexec.mainClass"="edu.escuelaing.arep.ASE.app.main"
+	 java -cp "target\classes" edu.escuelaing.arep.ASE.app.main
+
 
 **Linux/MacOs**
 
-	 mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.ASE.app.main"
+	 java -cp target/classes edu.escuelaing.arep.ASE.app.main
+
 
 Por ultimo accedemos a nuestro navegador de confianza con la siguiente URL
 
@@ -64,42 +66,13 @@ Aqui nos debera de cargar la siguiente pagina, con la cual podemos empezar a hac
 
 ![image](https://github.com/julianCS21/taller02AREP/assets/96396177/158d1eba-b6ce-41e7-9d63-cb478f20e1ba)
 
-# Documentos CSS
-
-![image](https://github.com/julianCS21/taller02AREP/assets/96396177/08cdea3f-f442-427a-b9fc-d3228f3415ab)
-
-# Documentos JS
-
-![image](https://github.com/julianCS21/taller02AREP/assets/96396177/b1093448-1013-4ddf-b737-fcdefb883195)
 
 
-# Documentos JPG
-
-![image](https://github.com/julianCS21/taller02AREP/assets/96396177/170a0e46-6a65-4f36-b1de-4b32e047eb59)
-
-
-
-# Documentos aplicacion HTML CSS Y JS
-
-![image](https://github.com/julianCS21/taller02AREP/assets/96396177/bdd3105e-61aa-472e-ab11-08eafcb3bd7e)
-
-# Aplicacion de servicio REST
-
-![image](https://github.com/julianCS21/taller02AREP/assets/96396177/6ae7c746-9a0a-497d-9e66-c84fe40926d1)
-
-
-
-# Sistema operativo Windows
-
-
-![image](https://github.com/julianCS21/taller03AREP/assets/96396177/38ee9e67-6392-46f8-9d7b-229663221930)
+# Documentos PNG
 
 
 
 
-# Sistema operativo Linux
-
-![WhatsApp Image 2023-09-03 at 1 23 22 PM](https://github.com/julianCS21/taller03AREP/assets/96396177/f17a7421-989d-4b66-aa16-3dcfff042b44)
 
 
 
